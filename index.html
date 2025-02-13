@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Cursive', sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        h1 {
+            color: #ff5e99;
+            font-size: 40px;
+            margin: 0;
+        }
+
+        .names {
+            font-size: 30px;
+            color: #ff69b4;
+            margin-top: 10px;
+        }
+
+        .message {
+            font-size: 20px;
+            color: #444;
+            margin: 20px 0;
+        }
+
+        .hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .hearts div {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: pink;
+            animation: float 8s infinite;
+            border-radius: 50% 50% 0 0;
+            transform: rotate(-45deg);
+        }
+
+        .hearts div::before,
+        .hearts div::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: pink;
+            border-radius: 50%;
+        }
+
+        .hearts div::before {
+            top: -10px;
+            left: 0;
+        }
+
+        .hearts div::after {
+            left: 10px;
+            top: 0;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(-45deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(-45deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Valentine's Day my love shubu!</h1>
+        <div class="names">Seema ❤️ Shubham</div>
+        <div class="message">
+            "You are my today and all of my tomorrows. <br> 
+            I love you more each day. <br>
+            Happy Valentine's Day, Baby!
+           "
+        </div>
+    </div>
+
+    <!-- Floating Hearts Animation -->
+    <div class="hearts">
+        <div style="left: 10%; animation-duration: 6s;"></div>
+        <div style="left: 20%; animation-duration: 8s;"></div>
+        <div style="left: 30%; animation-duration: 7s;"></div>
+        <div style="left: 40%; animation-duration: 5s;"></div>
+        <div style="left: 50%; animation-duration: 9s;"></div>
+        <div style="left: 60%; animation-duration: 6s;"></div>
+        <div style="left: 70%; animation-duration: 8s;"></div>
+        <div style="left: 80%; animation-duration: 7s;"></div>
+        <div style="left: 90%; animation-duration: 5s;"></div>
+    </div>
+
+    <!-- Background Music -->
+    <audio autoplay loop>
+        <source src="song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</body>
+</html>
